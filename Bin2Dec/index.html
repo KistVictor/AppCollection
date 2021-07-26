@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BioRhyme&amp;family=Space+Mono&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <title>Binary to Decimanl</title>
+  <title>Binary to Decimal</title>
 
 </head>
 <body>
 
   <form action="">
     <label for="binaryNumber">Binary-to-Decimal number converter</label>
-    <input type="number" name="binaryNumber" maxlength="8" minlength="8" data-form-input />
+    <input type="text" name="binaryNumber" maxlength="8"  data-form-input />
     <button class="form-button" data-form-button>Calculate</button>
   </form>
 
@@ -27,18 +27,35 @@
 
     bin = document.querySelector("[data-form-input]").value
 
+    const isOnly01 = verifyNumbers(bin)
+    
+    if (!isOnly01) {
+      return
+    }
+
     dec = parseInt(bin, 2)
 
     showDecimalNumber(dec)
 
   }
 
+  function verifyNumbers(bin) {
+    const binArray = bin.split('') 
+
+    for(let i = 0; i < binArray.length; i++) {
+      if(binArray[i] != 0 && binArray[i] != 1) {
+        window.alert("Only 0 and 1 accepted")
+        return false
+      }
+    }
+    
+    return true
+  }
+
   function showDecimalNumber(dec) {
     const form = document.querySelector("form")
 
     const decimalNumber = document.createElement("p")
-
-    console.log(decimalNumber)
 
     decimalNumber.innerText = dec
 
