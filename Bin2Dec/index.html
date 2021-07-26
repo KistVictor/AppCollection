@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BioRhyme&amp;family=Space+Mono&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <title>Binary to Decimanl</title>
+
+</head>
+<body>
+
+  <form action="">
+    <label for="binaryNumber">Binary-to-Decimal number converter</label>
+    <input type="number" name="binaryNumber" maxlength="8" minlength="8" data-form-input />
+    <button class="form-button" data-form-button>Calculate</button>
+  </form>
+
+
+</body>
+
+<script>
+  const bin2Dec = (event) => {
+    event.preventDefault()
+
+    bin = document.querySelector("[data-form-input]").value
+
+    dec = parseInt(bin, 2)
+
+    showDecimalNumber(dec)
+
+  }
+
+  function showDecimalNumber(dec) {
+    const form = document.querySelector("form")
+
+    const decimalNumber = document.createElement("p")
+
+    console.log(decimalNumber)
+
+    decimalNumber.innerText = dec
+
+    form.appendChild(decimalNumber)
+  }
+
+  const formButton = document.querySelector("[data-form-button]");
+  
+  formButton.addEventListener("click", bin2Dec);
+</script>
+
+</html>
