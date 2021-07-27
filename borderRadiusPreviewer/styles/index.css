@@ -1,5 +1,23 @@
+body {
+  background-color: #498A8C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-top: 100px;
+}
+
 .content {
-  background: url(../img/space.jpg);
-  width: 400px;
+  width: 700px;
   height: 400px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  background-color: white;
 }

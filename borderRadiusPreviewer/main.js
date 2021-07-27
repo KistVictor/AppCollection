@@ -1,33 +1,38 @@
-// armazena o valor dos inputs
-const i1 = document.querySelector(".i1")
-const i2 = document.querySelector(".i2")
-const i3 = document.querySelector(".i3")
-const i4 = document.querySelector(".i4")
+const inputs = document.querySelectorAll("input")
+const text = document.querySelector("textarea")
 const content = document.querySelector(".content")
 
-// add classlist na div
-const changeBorderTopLeftRadius = (event) => {
-    event.preventDefault()
-    content.style.borderTopLeftRadius = `${i1.value}px`
+function changeBorderRadius(event) {
+    switch (event.target.id) {
+        case "i1":
+            content.style.borderTopLeftRadius = `${i1.value}px`
+            break
+        case "i2":
+            content.style.borderTopRightRadius = `${i2.value}px`
+            break
+        case "i3":
+            content.style.borderBottomRightRadius = `${i3.value}px`
+            break
+        case "i4":
+            content.style.borderBottomLeftRadius = `${i4.value}px`
+            break
+        default:
+            break
+    }
+    changeText()
 }
 
-const changeBorderTopRightRadius = (event) => {
-    event.preventDefault()
-    content.style.borderTopRightRadius = `${i2.value}px`
+function changeText() {
+    text.innerText = `${i1.value}px ${i2.value}px ${i3.value}px ${i4.value}px`
 }
 
-const changeBorderBottomRightRadius = (event) => {
-    event.preventDefault()
-    content.style.borderBottomRightRadius = `${i3.value}px`
-}
-
-const changeBorderBottomLeftRadius = (event) => {
-    event.preventDefault()
-    content.style.borderBottomLeftRadius = `${i4.value}px`
+function copyTextToClipBoard() {
+    text.select()
+    document.execCommand("copy");
 }
 
 // ouvir a mudanca no input
-i1.addEventListener("change", changeBorderTopLeftRadius);
-i2.addEventListener("change", changeBorderTopRightRadius);
-i3.addEventListener("change", changeBorderBottomRightRadius);
-i4.addEventListener("change", changeBorderBottomLeftRadius);
+inputs.forEach((input) => {
+    console.log(input.innerText)
+    input.addEventListener("input", changeBorderRadius)
+})
