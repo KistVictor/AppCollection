@@ -39,5 +39,5 @@
   }
 
   const formButton = document.querySelector("[data-form-button]");
-  
+  console.log(formButton)
   formButton.addEventListener("click", bin2Dec);
