@@ -8,6 +8,11 @@ body {
   padding-top: 100px;
 }
 
+input {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
 .content {
   width: 700px;
   height: 400px;
@@ -16,8 +21,23 @@ body {
 .texts {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 30px;
 }
 
-p {
-  background-color: white;
+textarea {
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  resize: none;
+  overflow: auto;
+}
+
+button {
+  height: 29px;
+  background-color: #3E0E0D;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: white;
 }

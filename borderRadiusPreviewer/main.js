@@ -31,7 +31,6 @@ function copyTextToClipBoard() {
     document.execCommand("copy");
 }
 
-// ouvir a mudanca no input
 inputs.forEach((input) => {
     console.log(input.innerText)
     input.addEventListener("input", changeBorderRadius)
