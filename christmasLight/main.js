@@ -1,11 +1,15 @@
-const lights = document.querySelectorAll(".circle")
+const lights = document.querySelectorAll(".light")
+const speedValue = document.querySelector(".speedValue")
+const lightQtdValue = document.querySelector(".lightQtdValue")
 
 const setSpeed = () => {
-
+  for (let i = 0; i < lights.length; i++) {
+    lights[i].style.animationDuration = speedValue.value + 's'
+  }
 }
 
 const setLightQtd = () => {
-
+  console.log(lightQtdValue.value)
 }
 
 const on = () => {
