@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <div class="main">
+  <header>
     <div class="light red"></div>
     <div class="light yellow"></div>
     <div class="light blue"></div>
@@ -21,27 +21,29 @@
     <div class="light yellow"></div>
     <div class="light blue"></div>
     <div class="light green"></div>
-  </div>
+  </header>
 
-  <div class="utilities">
+  <main>
 
-    <div class="title">
-      <h1 id="title">Christmas Lights</h1>
+    <h1 class="title">Christmas Lights</h1>
+
+    <div>
       <button id="play" onclick="on()">On</button>
       <button id="stop" onclick="off()">Off</button>
     </div>
 
-    <div class="buttons">
-      <label for="">Speed:</label>
-       <input type="number" class="speedValue" min="1" max="5" placeholder="From 1 until 5 only.">
-       <input type="submit" class="submitButton" value="RUN" onclick="setSpeed()">
-
-       <label for="">light qtd:</label>
-       <input type="number" class="lightQtdValue" min="1" max="7" placeholder="From 1 until 7 only.">
-       <input type="submit" class="submitButton" value="RUN" onclick="setLightQtd()">
+    <div>
+      <button onclick="addLight()">+</button>
+      <button onclick="removeLight()">-</button>
     </div>
 
-  </div>
+    <div class="buttons">
+      <label for="">Speed:</label>
+       <input type="number" class="speedValue" min="1" max="5" placeholder="1 to 5">
+       <input type="submit" class="submitButton" value="RUN" onclick="setSpeed()">
+    </div>
+
+  </main>
     
 </body>
 </html>

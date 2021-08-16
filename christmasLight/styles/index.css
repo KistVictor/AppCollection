@@ -14,7 +14,7 @@ body {
   overflow: hidden;
 }
 
-.utilities {
+main {
   width: 100vw;
   padding: 1rem;
   display: flex;
@@ -35,12 +35,12 @@ body {
 .title {
   font-family: 'Cinzel', sans-serif;
   letter-spacing: 2px;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align : center;
   text-shadow: 0 0 30px white;
 }
 
-.utilities button {
+main button {
   height: 50px;
   width: 50px;
   background: none;
@@ -51,12 +51,12 @@ body {
   margin: 0 1rem;
 }
 
-.utilities label {
+main label {
   padding: 10px;
 }
 
 .speedValue, .lightQtdValue {
-  width: 140px;
+  width: 60px;
   height: 40px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -82,7 +82,7 @@ button:hover, .submitButton:hover, button:active, .submitButton:active {
   transition: 0.5s ease;
 }
 
-.main {
+header {
   border-radius: 25px;
   height: 20vh;
   width: 100vw;
