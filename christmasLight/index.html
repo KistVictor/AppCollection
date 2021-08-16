@@ -24,16 +24,23 @@
   </div>
 
   <div class="utilities">
+
     <div class="title">
       <h1 id="title">Christmas Lights</h1>
+      <button id="play" onclick="on()">On</button>
+      <button id="stop" onclick="off()">Off</button>
     </div>
+
     <div class="buttons">
-      <button id="play">On</button>
-      <button id="stop">Off</button>
       <label for="">Speed:</label>
-       <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="From 1 until 5 only." value="">
-       <input type="submit" id="submit" name="" value="RUN" onclick="convert()">
+       <input type="number" class="input" id="speedValue" min="1" max="5" placeholder="From 1 until 5 only.">
+       <input type="submit" class="submitButton" value="RUN" onclick="setSpeed()">
+
+       <label for="">light qtd:</label>
+       <input type="number" class="input" id="lightQtdValue" min="1" max="7" placeholder="From 1 until 7 only.">
+       <input type="submit" class="submitButton" value="RUN" onclick="setLightQtd()">
     </div>
+
   </div>
     
 </body>
